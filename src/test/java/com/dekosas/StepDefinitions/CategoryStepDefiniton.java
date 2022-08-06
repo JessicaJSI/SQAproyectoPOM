@@ -29,6 +29,7 @@ public class CategoryStepDefiniton {
 
     @When("^Se busca la categoria y subcategoria$")
     public void seBuscaLaCategoriaYSubcategoria() {
+        paginaPrincipalStep.btnIrPaginaPrincipal();
         paginaPrincipalStep.clickTodaLaTienda();
         paginaPrincipalStep.clickCategoriaCocina();
         categoriaCocinaStep.clickAccesoriosCocina();
@@ -36,7 +37,7 @@ public class CategoryStepDefiniton {
 
     @When("^se elige un producto, se aumenta en tres y se agrega al carrito$")
     public void seEligeUnProductoSeAumentaEnTresYSeAgregaAlCarrito() {
-        categoriaCocinaStep.clickProducto(categoriaCocinaPageObject.getProdPlacaInduccion());
+        categoriaCocinaStep.clickProducto(categoriaCocinaPageObject.getProdPlacaInduccion(), true);
         productoCocinaStep.txtCambiarCantidad();
         productoCocinaStep.btnAgregarAlCarrito();
     }

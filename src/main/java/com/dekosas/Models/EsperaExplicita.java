@@ -13,7 +13,7 @@ public class EsperaExplicita {
         myWaitVar.until(ExpectedConditions.elementToBeClickable(elemento));
     }
 
-    public void esperaExplicitaTexto (WebDriver driver, By elemento){
+    public static void esperaExplicitaTexto (WebDriver driver, By elemento){
         WebDriverWait myWaitVar = new WebDriverWait(driver, 30);
         myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(elemento));
     }

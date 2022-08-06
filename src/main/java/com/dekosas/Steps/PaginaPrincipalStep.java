@@ -58,6 +58,7 @@ public class PaginaPrincipalStep {
 
     @Step
     public void btnIrPaginaPrincipal(){
+        EsperaExplicita.esperarCargaPaginas(paginaPrincipalPageObject.getDriver());
         paginaPrincipalPageObject.getDriver().navigate().to("https://dekosas.com/co/");
     }
 

@@ -1,5 +1,6 @@
 package com.dekosas.Steps;
 
+import com.dekosas.Models.EsperaExplicita;
 import com.dekosas.Models.Scroll;
 import com.dekosas.PageObjects.CategoriaCocinaPageObject;
 import net.thucydides.core.annotations.Step;
@@ -17,8 +18,11 @@ public class CategoriaCocinaStep {
     }
 
     @Step
-    public void clickProducto(By elemento){
-        scroll.scrollElemento(categoriaCocinaPageObject.getDriver(), elemento);
+    public void clickProducto(By elemento, Boolean hacerScroll){
+        //EsperaExplicita.esperarCargaPaginas(categoriaCocinaPageObject.getDriver());
+        if(hacerScroll){
+            scroll.scrollElemento(categoriaCocinaPageObject.getDriver(), elemento);
+        }
         categoriaCocinaPageObject.getDriver().findElement(elemento).click();
     }
 

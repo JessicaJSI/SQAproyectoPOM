@@ -4,7 +4,8 @@ Feature: Seleccionar tres productos y agregarlos al carro luego digilenciar el e
 
   Background:
     Given Que el usuario se encuentre en la pagina web
-    When Se busca la categoria y subcategoria
+    When Se ingrese el usuario con la clave
+    And Se busca la categoria y subcategoria
 
   Scenario: Buscar tres productos y digilenciar informacion de envio
     Given Que el usuario se encuentre en la subcategoria del producto
