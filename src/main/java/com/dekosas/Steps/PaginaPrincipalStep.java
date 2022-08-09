@@ -52,6 +52,7 @@ public class PaginaPrincipalStep {
 
     @Step
     public void clickCategoriaCocina(){
+        //EsperaExplicita.esperarCargaPaginas(paginaPrincipalPageObject.getDriver());
         //scroll.scrollElemento(paginaPrincipalPageObject.getDriver(), paginaPrincipalPageObject.getBtnCocina());
         paginaPrincipalPageObject.getDriver().findElement(paginaPrincipalPageObject.getBtnCocina()).click();
     }

@@ -52,15 +52,25 @@ public class CartBuyStepDefinition {
         paginaPrincipalStep.btnIrCarroCompras();
         carritoStep.btnPasaporCaja();
         carritoStep.ingresarDireccion();
+        carritoStep.seleccionarPais();
+        carritoStep.seleccionarDepartamento();
+        carritoStep.seleccionarCiudad();
+        carritoStep.ingresarNumTelefono();
+        carritoStep.seleccionarTipoID();
+        carritoStep.ingresarNumID();
+        carritoStep.btnSiguientePasoCompra();
     }
 
     @When("^Cancele el envio$")
     public void canceleElEnvio() {
+        paginaPrincipalStep.btnIrPaginaPrincipal();
+        paginaPrincipalStep.btnIrCarroCompras();
+        carritoStep.eliminarProducto();
 
     }
 
     @Then("^El usuario visualizara el carrito vacio$")
     public void elUsuarioVisualizaraElCarritoVacio() {
-
+        carritoStep.msjVerificacionCarroVacio();
     }
 }
